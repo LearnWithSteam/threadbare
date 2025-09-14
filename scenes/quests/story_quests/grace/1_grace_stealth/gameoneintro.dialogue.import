@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b4cbgmmbrablq"
+path="res://.godot/imported/gameoneintro.dialogue-caa43c1a5f85688064f8fc2f87c4fe41.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/grace/1_grace_stealth/gameoneintro.dialogue"
+dest_files=["res://.godot/imported/gameoneintro.dialogue-caa43c1a5f85688064f8fc2f87c4fe41.tres"]
+
+[params]
+
+defaults=true
