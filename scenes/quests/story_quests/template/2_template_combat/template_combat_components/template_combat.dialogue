@@ -2,10 +2,10 @@
 # SPDX-License-Identifier: MPL-2.0
 
 ~ start
-Something in this scene will throw projectiles at you. The goal is to redirect them toward the targets.
-Explore the Scene Tree to add, change, or remove elements.
+"Welcome to the brain lab of Santiago Ramón y Cajal, the scientist who mapped neurons long before anyone else."
+"Quick! The neuron pathways are a mess! You need to press the right neurons in correct order to reconnect the network."
 => END
 
 ~ well_done
-You can add text here after the player takes the collectible. Be creative with this one!
+ "Boom! Neurons reconnected! Cajal would be proud of your wiring skills."
 => END
