@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://dnj5b83ok18vp"]
+[gd_scene load_steps=21 format=4 uid="uid://dnj5b83ok18vp"]
 
 [ext_resource type="Script" uid="uid://dnp0tjloec2d7" path="res://scenes/game_logic/stealth_game_logic.gd" id="1_6ijka"]
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="2_veqyy"]
@@ -12,7 +12,6 @@
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="11_l3kfa"]
 [ext_resource type="Resource" uid="uid://b4cbgmmbrablq" path="res://scenes/quests/story_quests/grace/1_grace_stealth/gameoneintro.dialogue" id="12_0ouel"]
 [ext_resource type="AudioStream" uid="uid://1ljry6lff4f6" path="res://scenes/quests/story_quests/grace/1_grace_stealth/grace_stealth_components/CorrectBling.mp3" id="12_g3t4f"]
-[ext_resource type="Script" uid="uid://be7lr8ty24cix" path="res://scenes/game_elements/props/collectible_item/components/collectible_item.gd" id="12_hao20"]
 [ext_resource type="PackedScene" uid="uid://d37mebu7atru7" path="res://scenes/game_elements/characters/enemies/guard/guard.tscn" id="13_6am7x"]
 [ext_resource type="PackedScene" uid="uid://b8sok264erfoc" path="res://scenes/game_elements/props/sequence_puzzle_object/sequence_puzzle_object.tscn" id="15_uy4xv"]
 [ext_resource type="AudioStream" uid="uid://cg57q82pb243w" path="res://assets/third_party/xylophone-sampler-pack/xylophone-c3.ogg" id="16_6vdra"]
@@ -102,7 +101,7 @@ time_to_detect_player = 0.1
 detection_area_scale = 0.6
 
 [node name="Player" parent="." instance=ExtResource("3_xdwf6")]
-position = Vector2(2163, 4662)
+position = Vector2(2137, 4667)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 process_mode = 3
@@ -121,10 +120,6 @@ position = Vector2(3543, 544)
 next_scene = "uid://thwcu5akkqp5"
 item = SubResource("Resource_idy4y")
 collected_dialogue = ExtResource("10_hf7b2")
-
-[node name="CollectibleItem" type="Node2D" parent="CollectibleItem"]
-script = ExtResource("12_hao20")
-metadata/_custom_type_script = "uid://be7lr8ty24cix"
 
 [node name="Cinematic" type="Node2D" parent="."]
 position = Vector2(-355, 119)
