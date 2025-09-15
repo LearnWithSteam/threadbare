@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://hb6ekertaof8"]
+[gd_scene load_steps=62 format=4 uid="uid://hb6ekertaof8"]
 
 [ext_resource type="Script" uid="uid://dnp0tjloec2d7" path="res://scenes/game_logic/stealth_game_logic.gd" id="1_hmya5"]
 [ext_resource type="Material" uid="uid://64aeyjitacv3" path="res://scenes/game_elements/props/void/void_chromakey_material.tres" id="2_446rl"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://d37mebu7atru7" path="res://scenes/game_elements/characters/enemies/guard/guard.tscn" id="4_qcfi2"]
 [ext_resource type="SpriteFrames" uid="uid://dn0ivusgamrg3" path="res://scenes/quests/story_quests/stella/stella_player_components/stella_player.tres" id="4_rlkm0"]
 [ext_resource type="PackedScene" uid="uid://dua6mynlw2ptw" path="res://scenes/game_elements/props/checkpoint/checkpoint.tscn" id="5_8y4yf"]
-[ext_resource type="SpriteFrames" uid="uid://dkldbyul3gceg" path="res://scenes/quests/story_quests/stella/1_stella_stealth/stella_stealth_components/stella_guard_enemy.tres" id="6_wgqmn"]
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="7_n4o8u"]
 [ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="8_jobnx"]
 [ext_resource type="Resource" uid="uid://c025q6p1owbcu" path="res://scenes/quests/story_quests/stella/1_stella_stealth/stella_stealth_components/stella_checkpoint.dialogue" id="8_wgqmn"]
@@ -22,11 +21,49 @@
 [ext_resource type="Resource" uid="uid://fgepu5pdp6wu" path="res://scenes/quests/story_quests/stella/1_stella_stealth/stella_stealth_components/stella_firekeeper.dialogue" id="16_rlkm0"]
 [ext_resource type="SpriteFrames" uid="uid://dktcbyom7px88" path="res://scenes/quests/story_quests/stella/1_stella_stealth/stella_stealth_components/stella_firekeeper.tres" id="17_0ownb"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_0ownb"]
+resource_local_to_scene = true
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"alerted",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
 [sub_resource type="Curve2D" id="Curve2D_vnsq3"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -4358.66, 198.947, 0, 0, 0, 0, 2408, 196.112)
 }
 point_count = 2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_446rl"]
+resource_local_to_scene = true
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"alerted",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
 
 [sub_resource type="Curve2D" id="Curve2D_hejm3"]
 _data = {
@@ -34,11 +71,49 @@ _data = {
 }
 point_count = 8
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_cpmmr"]
+resource_local_to_scene = true
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"alerted",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
 [sub_resource type="Curve2D" id="Curve2D_wgqmn"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 165, 257, 0, 0, 0, 0, 0, 257, 0, 0, 0, 0, -6, -358, 0, 0, 0, 0, -9, -40, 0, 0, 0, 0, -13, -239, 0, 0, 0, 0, -9, 270, 0, 0, 0, 0, 178, 251)
 }
 point_count = 7
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fcgc7"]
+resource_local_to_scene = true
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"alerted",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
 
 [sub_resource type="Curve2D" id="Curve2D_rlkm0"]
 _data = {
@@ -46,11 +121,68 @@ _data = {
 }
 point_count = 5
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_l3kdm"]
+resource_local_to_scene = true
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"alerted",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
 [sub_resource type="Curve2D" id="Curve2D_0ownb"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -4, -759, 0, 0, 0, 0, -3, 30)
 }
 point_count = 2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iqom2"]
+resource_local_to_scene = true
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"alerted",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7nlig"]
+resource_local_to_scene = true
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"alerted",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
 
 [sub_resource type="Curve2D" id="Curve2D_cpmmr"]
 _data = {
@@ -58,11 +190,49 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_vuq3a"]
+resource_local_to_scene = true
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"alerted",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
 [sub_resource type="Curve2D" id="Curve2D_l3kdm"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, -567, 0, 0, 0, 0, 5, 4)
 }
 point_count = 3
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xxbe2"]
+resource_local_to_scene = true
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"alerted",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
 
 [sub_resource type="Curve2D" id="Curve2D_iqom2"]
 _data = {
@@ -70,11 +240,87 @@ _data = {
 }
 point_count = 3
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_fu23b"]
+resource_local_to_scene = true
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"alerted",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
 [sub_resource type="Curve2D" id="Curve2D_7nlig"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 7, -319, 0, 0, 0, 0, 7, -782)
 }
 point_count = 2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3tlwj"]
+resource_local_to_scene = true
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"alerted",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q85ym"]
+resource_local_to_scene = true
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"alerted",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l11yh"]
+resource_local_to_scene = true
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"alerted",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
 
 [sub_resource type="Curve2D" id="Curve2D_24u5l"]
 _data = {
@@ -82,11 +328,49 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_sxh1u"]
+resource_local_to_scene = true
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"alerted",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
 [sub_resource type="Curve2D" id="Curve2D_vuq3a"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -2, -593, 0, 0, 0, 0, -3, -783)
 }
 point_count = 2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r3778"]
+resource_local_to_scene = true
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"alerted",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
 
 [sub_resource type="Curve2D" id="Curve2D_xxbe2"]
 _data = {
@@ -94,11 +378,49 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_n57sd"]
+resource_local_to_scene = true
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"alerted",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
 [sub_resource type="Curve2D" id="Curve2D_fu23b"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 285.772, 82.1685, 0, 0, 0, 0, 292.162, -241.876, 0, 0, 0, 0, -124.486, -243.034, 0, 0, 0, 0, -128.321, 84.483, 0, 0, 0, 0, 81.2817, 86.7977, 0, 0, 0, 0, 283.216, 82.1685)
 }
 point_count = 6
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sqskl"]
+resource_local_to_scene = true
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"alerted",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
 
 [sub_resource type="Curve2D" id="Curve2D_q85ym"]
 _data = {
@@ -229,7 +551,7 @@ y_sort_enabled = true
 
 [node name="Guard1" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("4_qcfi2")]
 position = Vector2(558, 460.182)
-sprite_frames = ExtResource("6_wgqmn")
+sprite_frames = SubResource("SpriteFrames_0ownb")
 patrol_path = NodePath("../Guard1-PatrolPath")
 wait_time = 0.2
 move_speed = 200.0
@@ -244,7 +566,7 @@ curve = SubResource("Curve2D_vnsq3")
 
 [node name="Guard2" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("4_qcfi2")]
 position = Vector2(2435, 382)
-sprite_frames = ExtResource("6_wgqmn")
+sprite_frames = SubResource("SpriteFrames_446rl")
 patrol_path = NodePath("../Guard2-PatrolPath")
 wait_time = 0.3
 move_speed = 1000.0
@@ -256,7 +578,7 @@ curve = SubResource("Curve2D_hejm3")
 
 [node name="Guard3" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("4_qcfi2")]
 position = Vector2(2501, 1741)
-sprite_frames = ExtResource("6_wgqmn")
+sprite_frames = SubResource("SpriteFrames_cpmmr")
 patrol_path = NodePath("../Guard3-PatrolPath")
 move_speed = 200.0
 time_to_detect_player = 0.5
@@ -269,7 +591,7 @@ metadata/_edit_lock_ = true
 
 [node name="Guard4" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("4_qcfi2")]
 position = Vector2(2593, 2205)
-sprite_frames = ExtResource("6_wgqmn")
+sprite_frames = SubResource("SpriteFrames_fcgc7")
 patrol_path = NodePath("../Guard4-PatrolPath")
 wait_time = 0.8
 move_speed = 300.0
@@ -283,7 +605,7 @@ metadata/_edit_lock_ = true
 
 [node name="Guard5" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("4_qcfi2")]
 position = Vector2(1377, 1687)
-sprite_frames = ExtResource("6_wgqmn")
+sprite_frames = SubResource("SpriteFrames_l3kdm")
 patrol_path = NodePath("../Guard5-PatrolPath")
 wait_time = 0.8
 move_speed = 400.0
@@ -297,7 +619,7 @@ curve = SubResource("Curve2D_0ownb")
 
 [node name="Guard7" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("4_qcfi2")]
 position = Vector2(1181, 2463)
-sprite_frames = ExtResource("6_wgqmn")
+sprite_frames = SubResource("SpriteFrames_iqom2")
 patrol_path = NodePath("../Guard7-PatrolPath")
 wait_time = 0.4
 move_speed = 200.0
@@ -307,7 +629,7 @@ detection_area_scale = 0.2
 
 [node name="Guard16" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("4_qcfi2")]
 position = Vector2(1181, 2463)
-sprite_frames = ExtResource("6_wgqmn")
+sprite_frames = SubResource("SpriteFrames_7nlig")
 patrol_path = NodePath("../Guard7-PatrolPath")
 wait_time = 0.4
 move_speed = 200.0
@@ -321,7 +643,7 @@ curve = SubResource("Curve2D_cpmmr")
 
 [node name="Guard9" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("4_qcfi2")]
 position = Vector2(994, 2466)
-sprite_frames = ExtResource("6_wgqmn")
+sprite_frames = SubResource("SpriteFrames_vuq3a")
 patrol_path = NodePath("../Guard9-PatrolPath")
 wait_time = 0.2
 move_speed = 600.0
@@ -335,7 +657,7 @@ curve = SubResource("Curve2D_l3kdm")
 
 [node name="Guard10" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("4_qcfi2")]
 position = Vector2(993, 1684)
-sprite_frames = ExtResource("6_wgqmn")
+sprite_frames = SubResource("SpriteFrames_xxbe2")
 patrol_path = NodePath("../Guard10-PatrolPath")
 wait_time = 0.2
 move_speed = 800.0
@@ -349,7 +671,7 @@ curve = SubResource("Curve2D_iqom2")
 
 [node name="Guard11" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("4_qcfi2")]
 position = Vector2(802, 2155)
-sprite_frames = ExtResource("6_wgqmn")
+sprite_frames = SubResource("SpriteFrames_fu23b")
 patrol_path = NodePath("../Guard11-PatrolPath")
 wait_time = 0.4
 move_speed = 300.0
@@ -363,7 +685,7 @@ curve = SubResource("Curve2D_7nlig")
 
 [node name="Guard12" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("4_qcfi2")]
 position = Vector2(802, 2197)
-sprite_frames = ExtResource("6_wgqmn")
+sprite_frames = SubResource("SpriteFrames_3tlwj")
 patrol_path = NodePath("../Guard12-PatrolPath")
 wait_time = 0.2
 move_speed = 500.0
@@ -373,7 +695,7 @@ detection_area_scale = 0.2
 
 [node name="Guard18" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("4_qcfi2")]
 position = Vector2(802, 2197)
-sprite_frames = ExtResource("6_wgqmn")
+sprite_frames = SubResource("SpriteFrames_q85ym")
 patrol_path = NodePath("../Guard12-PatrolPath")
 wait_time = 0.2
 move_speed = 500.0
@@ -383,7 +705,7 @@ detection_area_scale = 0.2
 
 [node name="Guard19" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("4_qcfi2")]
 position = Vector2(802, 2197)
-sprite_frames = ExtResource("6_wgqmn")
+sprite_frames = SubResource("SpriteFrames_l11yh")
 patrol_path = NodePath("../Guard12-PatrolPath")
 wait_time = 0.2
 move_speed = 500.0
@@ -397,7 +719,7 @@ curve = SubResource("Curve2D_24u5l")
 
 [node name="Guard13" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("4_qcfi2")]
 position = Vector2(607, 1880)
-sprite_frames = ExtResource("6_wgqmn")
+sprite_frames = SubResource("SpriteFrames_sxh1u")
 patrol_path = NodePath("../Guard13-PatrolPath")
 wait_time = 0.1
 move_speed = 500.0
@@ -411,7 +733,7 @@ curve = SubResource("Curve2D_vuq3a")
 
 [node name="Guard14" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("4_qcfi2")]
 position = Vector2(611, 1905)
-sprite_frames = ExtResource("6_wgqmn")
+sprite_frames = SubResource("SpriteFrames_r3778")
 patrol_path = NodePath("../Guard14-PatrolPath")
 wait_time = 0.8
 move_speed = 200.0
@@ -425,7 +747,7 @@ curve = SubResource("Curve2D_xxbe2")
 
 [node name="Guard15" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("4_qcfi2")]
 position = Vector2(510, 1285)
-sprite_frames = ExtResource("6_wgqmn")
+sprite_frames = SubResource("SpriteFrames_n57sd")
 patrol_path = NodePath("../Guard15-PatrolPath")
 wait_time = 0.0
 move_speed = 300.0
@@ -440,7 +762,7 @@ curve = SubResource("Curve2D_fu23b")
 
 [node name="Guard17" parent="EnemyGuards" node_paths=PackedStringArray("patrol_path") instance=ExtResource("4_qcfi2")]
 position = Vector2(118.942, 1350)
-sprite_frames = ExtResource("6_wgqmn")
+sprite_frames = SubResource("SpriteFrames_sqskl")
 patrol_path = NodePath("../Guard17-PatrolPath")
 wait_time = 0.0
 move_speed = 600.0
@@ -2882,6 +3204,6 @@ scale = Vector2(0.3, 0.3)
 
 [node name="Firekeeper" parent="." instance=ExtResource("15_wgqmn")]
 position = Vector2(205, 546)
-npc_name = "Firekeeper"
 dialogue = ExtResource("16_rlkm0")
+npc_name = "Firekeeper"
 sprite_frames = ExtResource("17_0ownb")

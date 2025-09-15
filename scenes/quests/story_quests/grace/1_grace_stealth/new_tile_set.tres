@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bsftkgf62vwx1"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://bsftkgf62vwx1"]
 
 [ext_resource type="Texture2D" uid="uid://bodjx6send680" path="res://scenes/game_elements/characters/player/treegameone.png" id="1_l64by"]
+[ext_resource type="Texture2D" uid="uid://bar1e5aae331d" path="res://scenes/quests/story_quests/grace/1_grace_stealth/flowersgameone.png" id="2_vrbli"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vrbli"]
 texture = ExtResource("1_l64by")
@@ -8,7 +9,16 @@ texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-25.4013, -26.5303, 22.579, -23.7079, 3.95132, 32, -9.03158, 32)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pjehd"]
+texture = ExtResource("2_vrbli")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24.2724, -20.8855, 18.6276, -22.0145, 20.3211, 22.0145, -25.4013, 20.8855)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24.2724, -20.8855, 18.6276, -22.0145, 20.3211, 22.0145, -25.4013, 20.8855)
+
 [resource]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_vrbli")
+sources/1 = SubResource("TileSetAtlasSource_pjehd")

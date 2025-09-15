@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cuho6uiifx21v"
+path="res://.godot/imported/template_intro.dialogue-f1fcfa28e7cec787452f64bf8ef7bbd4.tres"
+
+[deps]
+
+source_file="res://scenes/quests/template_intro.dialogue"
+dest_files=["res://.godot/imported/template_intro.dialogue-f1fcfa28e7cec787452f64bf8ef7bbd4.tres"]
+
+[params]
+
+defaults=true
