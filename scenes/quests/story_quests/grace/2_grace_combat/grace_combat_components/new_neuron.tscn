@@ -1,0 +1,156 @@
+[gd_scene load_steps=23 format=4 uid="uid://dqi038jnq2mgr"]
+
+[ext_resource type="Script" uid="uid://cp54mgi54nywo" path="res://scenes/game_logic/fill_game_logic.gd" id="1_o7b1a"]
+[ext_resource type="Script" uid="uid://c2ejtht642uq3" path="res://scenes/quests/story_quests/grace/2_grace_combat/grace_combat_components/new_neuron.gd" id="1_xa72r"]
+[ext_resource type="Resource" uid="uid://3vrn5jdxov37" path="res://scenes/quests/story_quests/template/2_template_combat/template_combat_components/template_combat.dialogue" id="2_xa72r"]
+[ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="3_mb7cp"]
+[ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="4_120ea"]
+[ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="8_kryma"]
+[ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="9_t1teh"]
+[ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="10_caiga"]
+[ext_resource type="Texture2D" uid="uid://b6eoy8un7xoqp" path="res://assets/third_party/tiny-swords/UI/Buttons/Button_Red.png" id="11_eo2hd"]
+[ext_resource type="Texture2D" uid="uid://ddofc4v1akfpw" path="res://assets/third_party/tiny-swords/UI/Buttons/Button_Red_Pressed.png" id="12_87yep"]
+[ext_resource type="Texture2D" uid="uid://bq2s56qf1ago1" path="res://assets/third_party/tiny-swords/UI/Buttons/Button_Hover.png" id="14_mb7cp"]
+[ext_resource type="Script" uid="uid://diknsuw3mtj1n" path="res://scenes/game_elements/props/decoration/decoration.gd" id="15_caiga"]
+[ext_resource type="Texture2D" uid="uid://cyvi71ryavsld" path="res://scenes/game_elements/props/decoration/books/components/Books_2.png" id="16_eo2hd"]
+[ext_resource type="Texture2D" uid="uid://b65dg7i548oip" path="res://scenes/game_elements/props/decoration/books/components/Books_1.png" id="17_87yep"]
+[ext_resource type="Texture2D" uid="uid://boeaxk35yjpwl" path="res://scenes/game_elements/props/door/components/door_closed.png" id="18_qjyf3"]
+[ext_resource type="PackedScene" uid="uid://b82nsrh332syj" path="res://scenes/game_elements/characters/enemies/throwing_enemy/throwing_enemy.tscn" id="19_caiga"]
+[ext_resource type="Texture2D" uid="uid://dcfwrs4rw5qy0" path="res://scenes/game_elements/props/decoration/spool/components/ThreadSpool2.png" id="19_q0fuq"]
+[ext_resource type="PackedScene" uid="uid://y8ha8abfyap2" path="res://scenes/game_elements/props/filling_barrel/filling_barrel.tscn" id="20_eo2hd"]
+[ext_resource type="Texture2D" uid="uid://cepg1o3ihp055" path="res://assets/first_party/collectibles/world_spirit.png" id="20_inwx2"]
+[ext_resource type="SpriteFrames" uid="uid://c50725q5ey5j5" path="res://scenes/quests/story_quests/template/2_template_combat/template_combat_components/template_target_spriteframes.tres" id="21_87yep"]
+[ext_resource type="Texture2D" uid="uid://6bf8rum68wq3" path="res://assets/first_party/collectibles/world_imagination.png" id="21_igr24"]
+
+[sub_resource type="Resource" id="Resource_mn071"]
+script = ExtResource("9_t1teh")
+name = ""
+type = 1
+metadata/_custom_type_script = "uid://bgmwplmj3bfls"
+
+[node name="Combat" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_xa72r")
+
+[node name="FillGameLogic" type="Node" parent="."]
+script = ExtResource("1_o7b1a")
+barrels_to_win = null
+intro_dialogue = ExtResource("2_xa72r")
+metadata/_custom_type_script = "uid://cp54mgi54nywo"
+
+[node name="TileMapLayers" type="Node2D" parent="."]
+
+[node name="Grass" type="TileMapLayer" parent="TileMapLayers"]
+tile_map_data = PackedByteArray("AAANAAcAEAAAAAAAAAANAAYAEAAAAAAAAAANAAUAEAAAAAAAAAANAAQAEAAAAAAAAAANAAMAEAAAAAAAAAANAAIAEAAAAAAAAAANAAEAEAAAAAAAAAAMAAcAEAAAAAAAAAAMAAYAEAAAAAAAAAAMAAUAEAAAAAAAAAAMAAQAEAAAAAAAAAAMAAMAEAAAAAAAAAAMAAIAEAAAAAAAAAAMAAEAEAAAAAAAAAALAAcAEAAAAAAAAAALAAYAEAAAAAAAAAALAAUAEAAAAAAAAAALAAQAEAAAAAAAAAALAAMAEAAAAAAAAAALAAIAEAAAAAAAAAALAAEAEAAAAAAAAAAKAAcAEAAAAAAAAAAKAAYAEAAAAAAAAAAKAAUAEAAAAAAAAAAKAAQAEAAAAAAAAAAKAAMAEAAAAAAAAAAKAAIAEAAAAAAAAAAKAAEAEAAAAAAAAAAJAAcAEAAAAAAAAAAJAAYAEAAAAAAAAAAJAAUAEAAAAAAAAAAJAAQAEAAAAAAAAAAJAAMAEAAAAAAAAAAJAAIAEAAAAAAAAAAJAAEAEAAAAAAAAAAIAAcAEAAAAAAAAAAIAAYAEAAAAAAAAAAIAAUAEAAAAAAAAAAIAAQAEAAAAAAAAAAIAAMAEAAAAAAAAAAIAAIAEAAAAAAAAAAIAAEAEAAAAAAAAAAHAAcAEAAAAAAAAAAHAAYAEAAAAAAAAAAHAAUAEAAAAAAAAAAHAAQAEAAAAAAAAAAHAAMAEAAAAAAAAAAHAAIAEAAAAAAAAAAHAAEAEAAAAAAAAAAGAAcAEAAAAAAAAAAGAAYAEAAAAAAAAAAGAAUAEAAAAAAAAAAGAAQAEAAAAAAAAAAGAAMAEAAAAAAAAAAGAAIAEAAAAAAAAAAFAAcAEAAAAAAAAAAFAAYAEAAAAAAAAAAFAAUAEAAAAAAAAAAFAAQAEAAAAAAAAAAFAAMAEAAAAAAAAAAFAAIAEAAAAAAAAAAFAAEAEAAAAAAAAAAEAAcAEAAAAAAAAAAEAAYAEAAAAAAAAAAEAAUAEAAAAAAAAAAEAAQAEAAAAAAAAAAEAAMAEAAAAAAAAAAEAAIAEAAAAAAAAAAEAAEAEAAAAAAAAAADAAcAEAAAAAAAAAADAAYAEAAAAAAAAAADAAUAEAAAAAAAAAADAAQAEAAAAAAAAAADAAMAEAAAAAAAAAADAAIAEAAAAAAAAAADAAEAEAAAAAAAAAACAAcAEAAAAAAAAAACAAYAEAAAAAAAAAACAAUAEAAAAAAAAAACAAMAEAAAAAAAAAACAAIAEAAAAAAAAAACAAEAEAAAAAAAAAABAAcAEAAAAAAAAAABAAYAEAAAAAAAAAABAAUAEAAAAAAAAAABAAMAEAAAAAAAAAABAAIAEAAAAAAAAAABAAEAEAAAAAAAAAACAAQAEAAAAAAAAAABAAQAEAAAAAAAAAAAAAQAEAAAAAAAAAAAAAUAEAAAAAAAAAAAAAYAEAAAAAAAAAAAAAcAEAAAAAAAAAAGAAAAEAAAAAAAAAAGAAEAEAAAAAAAAAAHAAAAEAAAAAAAAAAFAAAAEAAAAAAAAAAIAAAAEAAAAAAAAAAJAAAAEAAAAAAAAAALAAAAEAAAAAAAAAAMAAAAEAAAAAAAAAAKAAAAEAAAAAAAAAANAAAAEAAAAAAAAAAEAAAAEAAAAAAAAAADAAAAEAAAAAAAAAACAAAAEAAAAAAAAAABAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAEAEAAAAAAAAAAAAAIAEAAAAAAAAAAAAAMAEAAAAAAAAAAAAAgAEAAAAAAAAAABAAgAEAAAAAAAAAACAAgAEAAAAAAAAAADAAgAEAAAAAAAAAAEAAgAEAAAAAAAAAAFAAgAEAAAAAAAAAAGAAgAEAAAAAAAAAAHAAgAEAAAAAAAAAAIAAgAEAAAAAAAAAAJAAgAEAAAAAAAAAAKAAgAEAAAAAAAAAAMAAgAEAAAAAAAAAALAAgAEAAAAAAAAAANAAgAEAAAAAAAAAAOAAgAEAAAAAAAAAAOAAcAEAAAAAAAAAAOAAYAEAAAAAAAAAAOAAUAEAAAAAAAAAAOAAQAEAAAAAAAAAAOAAMAEAAAAAAAAAAOAAIAEAAAAAAAAAAOAAEAEAAAAAAAAAAOAAAAEAAAAAAAAAADAAkAEAAAAAAAAAAEAAkAEAAAAAAAAAACAAkAEAAAAAAAAAACAAoAEAAAAAAAAAADAAoAEAAAAAAAAAAEAAoAEAAAAAAAAAAEAAsAEAAAAAAAAAADAAsAEAAAAAAAAAACAAsAEAAAAAAAAAACAAwAEAAAAAAAAAAEAAwAEAAAAAAAAAADAAwAEAAAAAAAAAACAA4AEAAAAAAAAAADAA4AEAAAAAAAAAAEAA4AEAAAAAAAAAAEAA0AEAAAAAAAAAADAA0AEAAAAAAAAAACAA0AEAAAAAAAAAACABAAEAAAAAAAAAADABAAEAAAAAAAAAAEABAAEAAAAAAAAAAEAA8AEAAAAAAAAAADAA8AEAAAAAAAAAACAA8AEAAAAAAAAAACABIAEAAAAAAAAAADABIAEAAAAAAAAAAEABIAEAAAAAAAAAAEABEAEAAAAAAAAAADABEAEAAAAAAAAAACABEAEAAAAAAAAAA=")
+tile_set = ExtResource("3_mb7cp")
+
+[node name="Stones" type="TileMapLayer" parent="TileMapLayers"]
+tile_map_data = PackedByteArray("AAAGAAkABAABAAUAAAAHAAkABAABAAUAAAAIAAkABAABAAUAAAAJAAkABAABAAUAAAAKAAkABAABAAUAAAALAAkABAABAAUAAAAMAAkABAABAAUAAAANAAkABAABAAUAAAAOAAkABAABAAUAAAAGAAgABAABAAAAAAAHAAgABAABAAQAAAAIAAgABAABAAQAAAAJAAgABAABAAQAAAAKAAgABAABAAQAAAALAAgABAABAAQAAAAMAAgABAABAAQAAAANAAgABAABAAQAAAAOAAgABAABAAQAAAAAAAEABAACAAEAAAABAAEABAABAAMAAAACAAEABAABAAUAAAACAAAABAABAAQAAAABAAAABAABAAIAAAAAAAAABAABAAEAAAADAAAABAABAAIAAAAFAAAABAACAAIAAAAEAAAABAABAAEAAAAEAAEABAABAAMAAAAFAAEABAABAAUAAAADAAEABAABAAUAAAANAAcABAAAAAEAAAAOAAcABAABAAEAAAANAAYABAAAAAAAAAAOAAYABAABAAEAAAAOAAUABAAAAAEAAAAOAAMABAAAAAEAAAAOAAIABAABAAEAAAANAAEABAAAAAEAAAANAAAABAABAAAAAAAOAAAABAABAAAAAAAOAAEABAABAAEAAAAOAAQABAAAAAEAAAAMAAAABAABAAAAAAALAAAABAABAAAAAAAKAAAABAABAAAAAAAJAAAABAABAAAAAAAIAAAABAABAAAAAAAHAAAABAAAAAEAAAANAAIABAAAAAIAAAANAAMABAAAAAMAAAAHAAEABAABAAMAAAAIAAEABAABAAUAAAAKAAEABAABAAUAAAALAAEABAABAAUAAAAJAAEABAABAAMAAAAMAAEABAABAAMAAAAGAAAABAABAAIAAAAGAAEABAABAAMAAAAAAAkABAABAAUAAAABAAkABAADAAEAAAAFAAkABAADAAEAAAAAAAgABAABAAAAAAABAAgABAABAAAAAAAFAAgABAAAAAAAAAAAAAIABAACAAEAAAAAAAMABAACAAEAAAAAAAQABAACAAEAAAAAAAcABAACAAEAAAAAAAYABAACAAEAAAAAAAUABAACAAEAAAABAAoABAADAAEAAAABAAsABAADAAEAAAABAAwABAADAAEAAAAFAAoABAADAAEAAAAFAAsABAADAAEAAAAFAAwABAADAAEAAAAFAA0ABAADAAEAAAABAA0ABAADAAEAAAABAA4ABAADAAEAAAAFAA4ABAADAAEAAAAFAA8ABAADAAEAAAABAA8ABAADAAEAAAAFABAABAADAAEAAAAFABEABAADAAEAAAAFABIABAABAAMAAAABABAABAADAAEAAAABABEABAADAAEAAAABABIABAABAAMAAAA=")
+tile_set = ExtResource("3_mb7cp")
+
+[node name="OnTheGround" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Player" parent="OnTheGround" instance=ExtResource("4_120ea")]
+position = Vector2(137, 438)
+
+[node name="ScreenOverlay" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource("10_caiga")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.333, 1.333)
+limit_left = 0
+limit_top = 0
+limit_right = 2048
+limit_bottom = 2048
+position_smoothing_enabled = true
+editor_draw_limits = true
+
+[node name="Neuron1" type="TextureButton" parent="."]
+offset_left = 420.0
+offset_top = 394.0
+offset_right = 496.0
+offset_bottom = 483.0
+texture_normal = ExtResource("11_eo2hd")
+texture_pressed = ExtResource("12_87yep")
+texture_hover = ExtResource("14_mb7cp")
+
+[node name="Neuron2" type="TextureButton" parent="."]
+offset_left = 242.0
+offset_top = 265.0
+offset_right = 306.0
+offset_bottom = 329.0
+texture_normal = ExtResource("11_eo2hd")
+texture_pressed = ExtResource("12_87yep")
+texture_hover = ExtResource("14_mb7cp")
+
+[node name="Neuron3" type="TextureButton" parent="."]
+offset_left = 446.0
+offset_top = 208.0
+offset_right = 510.0
+offset_bottom = 272.0
+texture_normal = ExtResource("11_eo2hd")
+texture_pressed = ExtResource("12_87yep")
+texture_hover = ExtResource("14_mb7cp")
+
+[node name="Neuron4" type="TextureButton" parent="."]
+offset_left = 654.0
+offset_top = 304.0
+offset_right = 718.0
+offset_bottom = 368.0
+texture_normal = ExtResource("11_eo2hd")
+texture_pressed = ExtResource("12_87yep")
+texture_hover = ExtResource("14_mb7cp")
+
+[node name="Decoration" type="Node2D" parent="."]
+position = Vector2(146, 176)
+script = ExtResource("15_caiga")
+metadata/_custom_type_script = "uid://diknsuw3mtj1n"
+
+[node name="Books" type="Sprite2D" parent="Decoration"]
+position = Vector2(-17, 0)
+texture = ExtResource("16_eo2hd")
+
+[node name="Book" type="Sprite2D" parent="Decoration"]
+position = Vector2(67, -18)
+texture = ExtResource("17_87yep")
+
+[node name="Door" type="Sprite2D" parent="Decoration"]
+position = Vector2(335, -84)
+texture = ExtResource("18_qjyf3")
+
+[node name="Wire" type="Sprite2D" parent="Decoration"]
+position = Vector2(629, 291)
+scale = Vector2(0.921875, 0.755857)
+texture = ExtResource("19_q0fuq")
+
+[node name="Wirered" type="Sprite2D" parent="Decoration"]
+position = Vector2(660, 310)
+scale = Vector2(0.859375, 0.6875)
+texture = ExtResource("20_inwx2")
+
+[node name="Wireyellow" type="Sprite2D" parent="Decoration"]
+position = Vector2(578, 311)
+scale = Vector2(1.01562, 0.78125)
+texture = ExtResource("21_igr24")
+
+[node name="CollectibleItem2" parent="." instance=ExtResource("8_kryma")]
+unique_name_in_owner = true
+position = Vector2(829, 328)
+revealed = false
+next_scene = "uid://x3wm2ce0ax8i"
+item = SubResource("Resource_mn071")
+collected_dialogue = ExtResource("2_xa72r")
+dialogue_title = &"well_done"
+
+[node name="ThrowingNPC" parent="." instance=ExtResource("19_caiga")]
+visible = false
+position = Vector2(834, 336)
+
+[node name="Target" parent="." instance=ExtResource("20_eo2hd")]
+visible = false
+position = Vector2(595, 191)
+sprite_frames = ExtResource("21_87yep")
+label = ""
+color = Color(1, 1, 1, 1)

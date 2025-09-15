@@ -608,7 +608,8 @@ script = ExtResource("3_j0tly")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(0, -17)
+position = Vector2(99, 8.5)
+scale = Vector2(3.625, 3.40625)
 sprite_frames = ExtResource("2_blfj0")
 animation = &"idle"
 autoplay = "idle"
@@ -630,7 +631,7 @@ script = ExtResource("6_3in67")
 character = NodePath("../..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerInteraction/InteractZone"]
-position = Vector2(47, -30)
+position = Vector2(116, 28)
 shape = SubResource("RectangleShape2D_blfj0")
 debug_color = Color(0.600391, 0.54335, 0, 0.42)
 
