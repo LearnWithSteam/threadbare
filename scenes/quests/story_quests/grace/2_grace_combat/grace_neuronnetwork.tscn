@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://x5u52o5tm254"]
+[gd_scene load_steps=33 format=4 uid="uid://x5u52o5tm254"]
 
 [ext_resource type="Script" uid="uid://cp54mgi54nywo" path="res://scenes/game_logic/fill_game_logic.gd" id="1_eelkn"]
 [ext_resource type="Script" uid="uid://d388w3tqblqi0" path="res://scenes/quests/story_quests/grace/2_grace_combat/grace_neuronnetwork.gd" id="1_xa383"]
@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://dotw0q510u6ni" path="res://scenes/quests/story_quests/grace/2_grace_combat/New Piskel (1).png" id="9_r35tm"]
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="10_7afs2"]
 [ext_resource type="Texture2D" uid="uid://b6w6fddedvetc" path="res://scenes/quests/story_quests/grace/2_grace_combat/New Piskel (3).png" id="10_tmgji"]
-[ext_resource type="Texture2D" uid="uid://cbnbemo0y5cen" path="res://spark.png" id="12_51cst"]
 [ext_resource type="Script" uid="uid://q8tpboo4xm00" path="res://scenes/quests/story_quests/grace/2_grace_combat/signal.gd" id="12_htxr6"]
 [ext_resource type="Texture2D" uid="uid://b6eoy8un7xoqp" path="res://assets/third_party/tiny-swords/UI/Buttons/Button_Red.png" id="20_nd32y"]
 [ext_resource type="Texture2D" uid="uid://ddofc4v1akfpw" path="res://assets/third_party/tiny-swords/UI/Buttons/Button_Red_Pressed.png" id="21_fs2xd"]
@@ -226,7 +225,6 @@ script = ExtResource("12_htxr6")
 [node name="Sprite2D" type="Sprite2D" parent="Signal"]
 position = Vector2(-17, 2)
 scale = Vector2(0.757813, 0.828125)
-texture = ExtResource("12_51cst")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Signal"]
 position = Vector2(-18, 0)
@@ -279,5 +277,3 @@ texture = ExtResource("23_tmgji")
 [node name="Sprite2D2" type="Sprite2D" parent="Decoration"]
 position = Vector2(325, 479)
 texture = ExtResource("24_baejh")
-
-[connection signal="goal_reached" from="FillGameLogic" to="OnTheGround/CollectibleItem" method="reveal"]

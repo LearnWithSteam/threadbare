@@ -17,8 +17,8 @@ func _ready() -> void:
 		await DialogueManager.dialogue_ended
 
 	# Connect all target signals
-	for target: Target in get_tree().get_nodes_in_group("targets"):
-		target.completed.connect(_on_target_completed)
+	#for target: Target in get_tree().get_nodes_in_group("targets"):
+		#target.completed.connect(_on_target_completed)
 
 	# Start enemy throwing if you have throwing_enemy group
 	get_tree().call_group("throwing_enemy", "start")
