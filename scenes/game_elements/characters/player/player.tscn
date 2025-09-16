@@ -50,7 +50,7 @@ anim_speed_max = 1.0
 height = 42.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blfj0"]
-size = Vector2(110, 80)
+size = Vector2(37, 42)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_je7p5"]
 size = Vector2(32, 47)
@@ -608,8 +608,6 @@ script = ExtResource("3_j0tly")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(-4, -28.5)
-scale = Vector2(3.625, 3.40625)
 sprite_frames = ExtResource("2_blfj0")
 animation = &"idle"
 autoplay = "idle"
@@ -631,7 +629,6 @@ script = ExtResource("6_3in67")
 character = NodePath("../..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerInteraction/InteractZone"]
-position = Vector2(13, -9)
 shape = SubResource("RectangleShape2D_blfj0")
 debug_color = Color(0.600391, 0.54335, 0, 0.42)
 
