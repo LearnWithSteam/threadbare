@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="7_srnf1"]
 [ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="8_ke317"]
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="9_oiusf"]
-[ext_resource type="Resource" uid="uid://dpv4wurvaamhb" path="res://scenes/quests/story_quests/template/1_template_stealth/template_stealth_components/template_collected.dialogue" id="10_hf7b2"]
+[ext_resource type="Resource" uid="uid://brqlofwfsc3ky" path="res://scenes/quests/story_quests/grace/1_grace_stealth/grace_stealth_components/template_collected.dialogue" id="11_6vdra"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="11_l3kfa"]
 [ext_resource type="Resource" uid="uid://b4cbgmmbrablq" path="res://scenes/quests/story_quests/grace/1_grace_stealth/gameoneintro.dialogue" id="12_0ouel"]
 [ext_resource type="AudioStream" uid="uid://1ljry6lff4f6" path="res://scenes/quests/story_quests/grace/1_grace_stealth/grace_stealth_components/CorrectBling.mp3" id="12_g3t4f"]
@@ -117,9 +117,9 @@ editor_draw_limits = true
 
 [node name="CollectibleItem" parent="." instance=ExtResource("8_ke317")]
 position = Vector2(3543, 544)
-next_scene = "uid://thwcu5akkqp5"
+next_scene = "uid://dn178dll2go0j"
 item = SubResource("Resource_idy4y")
-collected_dialogue = ExtResource("10_hf7b2")
+collected_dialogue = ExtResource("11_6vdra")
 
 [node name="Cinematic" type="Node2D" parent="."]
 position = Vector2(-355, 119)

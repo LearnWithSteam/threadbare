@@ -193,10 +193,8 @@ editor_draw_limits = true
 
 [node name="Talker" parent="." instance=ExtResource("14_asncp")]
 position = Vector2(1319, 275)
-npc_name = "Fisherman"
 dialogue = ExtResource("2_awu4o")
+npc_name = "Fisherman"
 sprite_frames = ExtResource("14_e46so")
-
-[connection signal="goal_reached" from="FillGameLogic" to="OnTheGround/CollectibleItem" method="reveal"]
 
 [editable path="OnTheGround/Target"]
